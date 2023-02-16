@@ -12,6 +12,12 @@ public class TableCrudPanel extends JPanel {
     public JButton deleteBtn() {
         return btn_remove;
     }
+    public JButton editBtn() {
+        return btn_edit;
+    }
+    public JButton addBtn() {
+        return btn_add;
+    }
 
     private void initButtons(){
 
@@ -35,6 +41,7 @@ public class TableCrudPanel extends JPanel {
         add(btn_edit);
         add(btn_remove);
     }
+
 
 
 }

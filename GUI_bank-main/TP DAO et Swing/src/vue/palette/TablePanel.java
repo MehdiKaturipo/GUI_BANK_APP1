@@ -1,5 +1,7 @@
 package vue.palette;
 import dao.daoFiles.ClientDao;
+import model.Client;
+import model.Sexe;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -93,6 +95,18 @@ public class TablePanel extends JPanel {
             var clients =  new ClientDao().findByKeywordLike(keyword);
 
             tableModel.initClientsData(clients);
+
+        });
+        searchPanel.getCrudPanel().addBtn().addActionListener(e -> {
+
+
+            new ClientDao().save(new Client( 0, "Soussan", "Mehdi", "Mehdi20", "12345", "D1245", "soussan@gmail.com", "06412356", Sexe.HOMME));
+
+            // Show a success message using the JOptionPane class
+            JOptionPane.showMessageDialog(this,
+                    "Le client a été ajouté avec succès",
+                    "I N F O",
+                    JOptionPane.INFORMATION_MESSAGE);
 
         });
     }

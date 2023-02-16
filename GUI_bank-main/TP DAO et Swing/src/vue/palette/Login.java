@@ -141,6 +141,17 @@ public class Login extends JFrame {
         lblNewLabel_7.setBounds(376, 170, 45, 32);
         panel_1.add(lblNewLabel_7);
     }
+    public void actionPerformed(ActionEvent e) {
+        //LoginFormValidator loginFormValidator = new LoginFormValidator();
+        String login = textField.getText();
+        String password = passwordField.getPassword().toString();
+        if (login.isEmpty() || password.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Veuillez remplir tous les champs");
+        } else {
+            this.setVisible(false);
+            JFrame MyFrame = new MyFrame("admin");
+        }
+    }
 
 
 }
