@@ -70,7 +70,7 @@ public class Login extends JFrame {
         lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
         panel_1.add(lblNewLabel);
 
-        textField = new JTextField("mouad");
+        textField = new JTextField("Soussan@gmail.com");
         textField.setFont(new Font("Tahoma", Font.PLAIN, 13));
         textField.setBounds(142, 122, 224, 27);
         panel_1.add(textField);
@@ -94,7 +94,7 @@ public class Login extends JFrame {
             String pass= String.valueOf(passwordField.getPassword());
             System.out.println(pass);
 
-            if(email.equals("mouad")&&pass.equals("123")){
+            if(email.equals("Soussan@gmail.com")&&pass.equals("123")){
                             this.setVisible(false);
            JFrame MyFrame = new MyFrame("admin");}
             else{
