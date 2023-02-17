@@ -49,6 +49,10 @@ public class Client extends Utilisateur{
         super(propriétaire);
     }
 
+    public Client(String text, String text1, String text2, String passwordValue) {
+
+    }
+
 
     @Override
     public String toString() {

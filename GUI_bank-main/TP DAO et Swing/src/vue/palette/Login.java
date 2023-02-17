@@ -45,7 +45,7 @@ public class Login extends JFrame {
 
 
          panel = new JPanel();
-        panel.setBackground(new Color(255, 255, 255));
+        panel.setBackground(Color.white);
         panel.setBounds(10, 0, 386, 456);
 
         panel.setLayout(null);
@@ -55,40 +55,42 @@ public class Login extends JFrame {
         panel.add(lblNewLabel_3);
 
          lblNewLabel_4 = new JLabel("");
-        lblNewLabel_4.setIcon(new ImageIcon(Login.class.getResource("/img/295128.png")));
+        lblNewLabel_4.setIcon(new ImageIcon(Login.class.getResource("/img/login.png")));
         lblNewLabel_4.setBounds(36, 10, 379, 427);
         panel.add(lblNewLabel_4);
 
          panel_1 = new JPanel();
-        panel_1.setBackground(new Color(0, 128, 255));
+        panel_1.setBackground(Color.DARK_GRAY);
         panel_1.setBounds(406, 0, 421, 456);
         panel_1.setLayout(null);
 
          lblNewLabel = new JLabel("Login");
-        lblNewLabel.setForeground(new Color(255, 255, 255));
+        lblNewLabel.setForeground(new Color(0, 128, 255));
         lblNewLabel.setBounds(175, 10, 77, 69);
         lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
         panel_1.add(lblNewLabel);
 
         textField = new JTextField("Soussan@gmail.com");
         textField.setFont(new Font("Tahoma", Font.PLAIN, 13));
+        textField.setForeground(new Color(0, 128, 255));
         textField.setBounds(142, 122, 224, 27);
         panel_1.add(textField);
         textField.setColumns(10);
 
          lblNewLabel_1 = new JLabel("Email :");
-        lblNewLabel_1.setForeground(new Color(255, 255, 255));
+        lblNewLabel_1.setForeground(new Color(0, 128, 255));
         lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
         lblNewLabel_1.setBounds(36, 127, 77, 13);
         panel_1.add(lblNewLabel_1);
 
          lblNewLabel_2 = new JLabel("Password :");
-        lblNewLabel_2.setForeground(new Color(255, 255, 255));
+        lblNewLabel_2.setForeground(new Color(0, 128, 255));
         lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
         lblNewLabel_2.setBounds(36, 180, 96, 13);
         panel_1.add(lblNewLabel_2);
 
          btnNewButton_1 = new JButton("login");
+         btnNewButton_1.setBackground(Color.BLACK);
         btnNewButton_1.addActionListener(click -> {
             String email= textField.getText();
             String pass= String.valueOf(passwordField.getPassword());
@@ -121,7 +123,7 @@ public class Login extends JFrame {
         panel_1.add(comboBox);
 
          lblNewLabel_5 = new JLabel("Status :");
-        lblNewLabel_5.setForeground(new Color(255, 255, 255));
+        lblNewLabel_5.setForeground(new Color(0, 128, 255));
         lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
         lblNewLabel_5.setBounds(36, 228, 77, 13);
         panel_1.add(lblNewLabel_5);

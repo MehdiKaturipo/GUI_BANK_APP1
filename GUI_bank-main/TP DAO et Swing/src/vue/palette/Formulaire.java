@@ -58,7 +58,7 @@ public class Formulaire extends JFrame  {
        panel.setLayout(null);
 
         panel_1 = new JPanel();
-       panel_1.setBackground(new Color(0, 128, 255));
+       panel_1.setBackground(Color.black);
        panel_1.setBounds(0, 0, 497, 64);
        panel.add(panel_1);
        panel_1.setLayout(null);
@@ -70,7 +70,7 @@ public class Formulaire extends JFrame  {
        lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 23));
 
         panel_2 = new JPanel();
-       panel_2.setBackground(new Color(0, 128, 255));
+       panel_2.setBackground(Color.BLACK);
        panel_2.setBounds(0, 644, 497, 86);
        panel.add(panel_2);
        panel_2.setLayout(null);

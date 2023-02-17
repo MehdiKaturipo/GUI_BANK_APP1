@@ -1,5 +1,6 @@
 package dao.daoFiles;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -7,7 +8,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
 public interface FileBasePaths {
-    Path FILEBASEFOLDER = Paths.get("TP DAO et Swing/myFileBase");
+    Path FILEBASEFOLDER = Paths.get("GUI_bank-main/TP DAO et Swing/myFileBase");
     Path LOGSFOLDER = Paths.get(FILEBASEFOLDER.toString(), "operationsLogs");
     Path CLIENT_TABLE = Paths.get(FILEBASEFOLDER.toString(), "clients.txt");
     Path INDEX_CLIENT = Paths.get(FILEBASEFOLDER.toString(),"clientsLastIndex.txt");

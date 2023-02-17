@@ -1,5 +1,7 @@
 package vue.palette;
+import Validator.FormValidator;
 import dao.daoFiles.ClientDao;
+import model.Banque;
 import model.Client;
 import model.Sexe;
 
@@ -98,15 +100,63 @@ public class TablePanel extends JPanel {
 
         });
         searchPanel.getCrudPanel().addBtn().addActionListener(e -> {
+            JTextField textFieldId = new JTextField(10);
+            JTextField textFieldNom = new JTextField(10);
+            JTextField textFieldPrenom = new JTextField(10);
+            JTextField textFieldLogin = new JTextField(10);
+            JPasswordField textFieldPass= new JPasswordField(10);
+            JTextField textFieldEmail = new JTextField(10);
+            JTextField textFieldTele= new JTextField(10);
+            JTextField textFieldSexe = new JTextField(10);
 
+            JPanel panel = new JPanel();
+            panel.add(new JLabel("ID:"));
+            panel.add(textFieldId);
+            panel.add(new JLabel("Nom:"));
+            panel.add(textFieldNom);
+            panel.add(new JLabel("Prenom:"));
+            panel.add(textFieldPrenom);
+            panel.add(new JLabel("Login:"));
+            panel.add(textFieldLogin);
+            panel.add(new JLabel("Password:"));
+            panel.add(textFieldPass);
+            panel.add(new JLabel("Email:"));
+            panel.add(textFieldEmail);
+            panel.add(new JLabel("Tele:"));
+            panel.add(textFieldTele);
+            panel.add(new JLabel("Sexe:"));
+            panel.add(textFieldTele);
+            //String Id = textFieldId.getText();
+            String Nom = textFieldNom.getText();
+            String Prenom = textFieldPrenom.getText();
+            String Login = textFieldLogin.getText();
+            String Password = textFieldPass.getText();
+            String Email = textFieldEmail.getText();
+            String Tele = textFieldTele.getText();
+            //String Sexe = textFieldSexe.getText();
 
-            new ClientDao().save(new Client( 0, "Soussan", "Mehdi", "Mehdi20", "12345", "D1245", "soussan@gmail.com", "06412356", Sexe.HOMME));
+            int result = JOptionPane.showConfirmDialog(null, panel,
+                    "Entrer infos nouveau Client", JOptionPane.OK_CANCEL_OPTION);
+            if (result == JOptionPane.OK_OPTION) {
+                String passwordValue = String.valueOf(textFieldPass.getPassword());
+                if (FormValidator.validateEmail(textFieldEmail.getText()) &&
+                        FormValidator.validatePassword(passwordValue) &&
+                        (textFieldNom.getText().length() > 0) &&
+                        (textFieldPrenom.getText().length() > 0)
 
-            // Show a success message using the JOptionPane class
-            JOptionPane.showMessageDialog(this,
-                    "Le client a été ajouté avec succès",
-                    "I N F O",
-                    JOptionPane.INFORMATION_MESSAGE);
+                ){
+                    new ClientDao().save(new Client( 1, Nom, Prenom, Login, Password, Email, Tele, Tele, Sexe.HOMME));
+
+                    // Show a success message using the JOptionPane class
+                    JOptionPane.showMessageDialog(this,
+                            "Le client a été ajouté avec succès",
+                            "I N F O",
+                            JOptionPane.INFORMATION_MESSAGE);
+                }else {
+                    JOptionPane.showMessageDialog(null, "Erreur de saisie");
+                }
+            }
+
 
         });
     }

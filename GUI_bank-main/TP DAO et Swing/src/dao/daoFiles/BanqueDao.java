@@ -104,7 +104,7 @@ public class BanqueDao implements IDao<Banque, Long> {
         // Solution D'incrémentation 1
         Long id = getIncrementedId();
         // Solution D'incrémentation 2
-           id = getIncrementedIdByIndexFile(FileBasePaths.BANK_AGENCIES_TABLE);
+        id = getIncrementedIdByIndexFile(FileBasePaths.BANK_AGENCIES_TABLE);
         String banquestr =  id + "\t\t\t" +
                 banque.getNomBanque()+ "\t" +
                 banque.getAdresseBanque()+ "\t" +
