@@ -39,6 +39,13 @@ public class Compte  extends Utilisateur {
         setPropriétaire(new Client(propriétaire));
     }
 
+    public Compte(double solde, Client client) {
+        setNumeroCompte();
+        setDateCreation();
+        setSolde(solde);
+        setPropriétaire(client);
+    }
+
 
     public void setDateCreation() { this.dateCreation = LocalDateTime.now(); }
     public void setPropriétaire(Client propriétaire) {

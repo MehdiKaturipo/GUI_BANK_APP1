@@ -1,11 +1,22 @@
 package model;
 
+import java.util.List;
+
 public class Client extends Utilisateur{
     protected String prenom, nom;
     private String email, cin, tel;
     private Sexe sexe;
+    private List<Compte> comptesClient;
 
-    public Client(String login, String pass, String n, String p, String cin, String mail, String tel,  Sexe sexe) {
+    public List<Compte> getComptesClient() {
+        return comptesClient;
+    }
+
+    public void setComptesClient(List<Compte> comptesClient) {
+        this.comptesClient = comptesClient;
+    }
+
+    public Client(String login, String pass, String n, String p, String cin, String mail, String tel, Sexe sexe) {
 
         setLogin        (login);
         setMotDePasse   (pass);
