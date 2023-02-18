@@ -474,11 +474,6 @@ public class ServiceIHMAdmin implements IServiceIHMAdmin{
     }
 
     @Override
-    public int menuComptabilité() {
-        return 0;
-    }
-
-
     public int menuComptabilite() {
         // menuComptabilite
         System.out.println("\n=============================================");
